@@ -1,0 +1,31 @@
+   \\Код для добавления текста
+   
+   <TextView
+        android:layout_width="129dp"
+        android:layout_height="53dp"
+        android:layout_marginLeft="152dp"
+        android:layout_marginTop="152dp"
+        android:text="HI МИР"
+        android:textColor="@color/colorPrimary"
+        android:textSize="32dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+     \\Код для добавления кнопки
+
+    <Button
+        android:id="@+id/myButton"
+        android:layout_width="390dp"
+        android:layout_height="44dp"
+        android:background="@color/colorAccent"
+        android:text="ENTER"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="671dp" />
+
+    \\Поле для ввода текста
+
+        <EditText
+    android:id="@+id/editText1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ems="10" />

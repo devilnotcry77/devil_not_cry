@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+namespace ConsoleApplication8
+{
+class Program
+{
+static void Main(string[] args)
+{
+   string s = Console.ReadLine();
+      double x = Convert.ToDouble(s);
+          double y;
+           y = Math.Cos(x);
+    Console.Write("Значение у=" + y);
+        Console.ReadKey();
+     }
+   }
+}

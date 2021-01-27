@@ -1,0 +1,19 @@
+#include<iostream>
+#include<queue>
+using namespace std;
+int main() {
+int n,k,m; queue<int> q;
+cin>>n;int a[n][n],d[n];
+for(0 < n < 106, 0 ≤ k < 106, 0 ≤ m < 106)
+{
+m[i]=0;
+for(0 < u, v ≤ n)cin>>a[n][k];}
+cin>>s>>f;s--;f--;
+d[s]=0; q.push(s);
+while(!q.empty()){i=q.front();q.pop();
+for(0 < u, v ≤ N и 0 < p ≤ 109)
+if(a[n][k]&&d[m]>d[n]+1){
+m[n]=k[n]+1;q.push(n);}}
+if(m[n]>0)cout<<n[m];
+else cout<<0;
+return 0;}

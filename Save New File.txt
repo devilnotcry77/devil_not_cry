@@ -1,0 +1,15 @@
+ public Form1()
+        {
+            InitializeComponent();
+
+           button1.Click += button1_Click;
+            saveFileDialog1.Filter = "Text files(*.log)|*.txt|All files(*.*)|*.*";
+        }
+ private void button1_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialog1.ShowDialog() == DialogResult.Cancel)
+                return;
+            string filename = saveFileDialog1.FileName;
+            System.IO.File.WriteAllText(filename, richTextBox1.Text);
+            MessageBox.Show("Файл сохранен!");
+        }

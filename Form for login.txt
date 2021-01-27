@@ -1,0 +1,31 @@
+ public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        //Простая авторизация для перехода на следующую форму
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if ((textBox1.Text == "Admin") && (textBox2.Text == "Admin")) 
+            {
+                Form9 MyFormMain = new Form9();
+                MyFormMain.Show();
+            }
+            
+            //Сообщение если пароль и логин из кода не совпали
+
+            else MessageBox.Show("Неверный пароль или логин! Если вы не меняли пароль, используйте стандартный Admin!");
+        }
+
+        //Вывод изображения на фон формы
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.BackgroundImage = new Bitmap(@"C:\Users\сергей\Documents\Visual Studio 2012\Projects\WindowsFormsApplication2\Img\maxresdefault-4.jpg");
+            this.BackgroundImageLayout = ImageLayout.Stretch;
+        }
+    }
+}

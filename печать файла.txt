@@ -1,0 +1,1 @@
+printForm1.Print()  \\Добавляем компнент printForm1 на форму

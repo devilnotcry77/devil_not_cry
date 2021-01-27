@@ -1,0 +1,1 @@
+MessageBox.Show("Connection Error ! " + er.Message, "Information");

@@ -1,0 +1,52 @@
+using System;
+using System.Net.NetworkInformation;
+using System.Windows.Forms;
+namespace InterfaceTrafficWatch
+{
+  public partial class MainForm : Form
+  {
+    private const double timerUpdate = 1000;
+    private NetworkInterface[] nicArr;
+    private Timer timer;
+    public MainForm()
+    {
+      InitializeComponent();
+
+      InitializeNetworkInterface();
+      InitializeTimer();
+
+    }
+    private void InitializeNetworkInterface()
+    {
+      nicArr = NetworkInterface.GetAllNetworkInterfaces();
+      for (int i = 0; i < nicArr.Length; i++)
+        cmbInterface.Items.Add(nicArr[i].Name);
+      cmbInterface.SelectedIndex = 0;
+    }
+    private void InitializeTimer()
+    {
+      timer = new Timer();
+      timer.Interval = (int)timerUpdate;
+      timer.Tick += new EventHandler(timer_Tick);
+      timer.Start();
+    }
+    private void UpdateNetworkInterface()
+    {
+      NetworkInterface nic = nicArr[cmbInterface.SelectedIndex];
+      IPv4InterfaceStatistics interfaceStats = nic.GetIPv4Statistics();
+      int bytesSentSpeed = (int)(interfaceStats.BytesSent - double.Parse(lblBytesSent.Text)) / 1024;
+      int bytesReceivedSpeed = (int)(interfaceStats.BytesReceived - double.Parse(lblBytesReceived.Text)) / 1024;
+      lblSpeed.Text = nic.Speed.ToString();
+      lblInterfaceType.Text = nic.NetworkInterfaceType.ToString();
+      lblSpeed.Text = nic.Speed.ToString();
+      lblBytesReceived.Text = interfaceStats.BytesReceived.ToString();
+      lblBytesSent.Text = interfaceStats.BytesSent.ToString();
+      lblUpload.Text = bytesSentSpeed.ToString() + " KB/s";
+      lblDownload.Text = bytesReceivedSpeed.ToString() + " KB/s";
+    }
+    void timer_Tick(object sender, EventArgs e)
+    {
+      UpdateNetworkInterface();
+    }
+  }
+}

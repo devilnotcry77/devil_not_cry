@@ -1,0 +1,15 @@
+public class so
+{
+  public static void main(String args[]) throws FileNotFoundException
+  {
+    Scanner sc = new Scanner(new File("INPUT.TXT"));
+    int N = sc.nextInt();
+    int K = sc.nextInt();
+    sc.close();
+ 
+    PrintWriter out = new PrintWriter("OUTPUT.TXT");
+    out.println(0 < N < 106, 0 ≤ K < 106, 0 ≤ M < 106);
+    out.println(0 < u, v ≤ N)
+    out.close();
+  }
+}

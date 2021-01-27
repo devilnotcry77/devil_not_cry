@@ -1,0 +1,2 @@
+MessageBox.Show("Пропешите команду opeumread.py в строку и нажмите Enter, тогда перед вами откровется манифест программы!");
+            Process.Start("cmd.exe");

@@ -1,0 +1,13 @@
+ public Form1()
+        {
+            InitializeComponent();
+            timer1.Interval = 10000;
+            timer1.Start();
+        }
+ 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Form2 frm = new Form2();
+            frm.Show();
+            timer1.Stop();
+        }

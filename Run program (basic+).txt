@@ -1,0 +1,4 @@
+Sub hgd()
+Dim RetVal
+RetVal = Shell("cmd", 1)
+End Sub

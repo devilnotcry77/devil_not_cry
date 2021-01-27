@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    cout << "Количество чисел: " << "\n";
+    cin >> n;
+    int *a = new int[n];
+    cout << "Введите числа:" << "\n";
+    for (int i=0; i<n; i++)
+        cin >> a[i];
+    int j=1, gcd=a[0];
+    while (j<n)
+    {
+        if (a[j] % gcd == 0)
+            j++;
+        else
+            gcd = a[j] % gcd;
+    }
+    cout << "НОД введённых чисел:" << gcd;
+}

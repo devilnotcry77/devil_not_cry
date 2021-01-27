@@ -1,0 +1,19 @@
+Button
+{
+    android:onClick="onClick"
+    \\можно изменить в свойствах кнопки
+}
+MainActivity.java
+{
+    \\protected void onCreat
+    Button buttonBack = (Button)findViewById(R.id.buttonBack);
+    buttonBack.setOnClickListener(this);
+}
+\\Изменить public class MainActivity extends AppCompatActivity{
+    \\на public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+@Override
+public void onClick(View view) {
+    Intent i;
+    i=new Intent(this,BackActivity.class);
+    startActivity(i);
+}

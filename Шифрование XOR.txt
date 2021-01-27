@@ -1,0 +1,6 @@
+key = 567  # Ключ шифрования
+
+crypt = ''
+for i in  message  :
+    crypt += chr(ord(i)^key)
+ message  = crypt

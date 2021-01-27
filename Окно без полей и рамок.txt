@@ -1,0 +1,6 @@
+ // Делаем обычный стиль.
+           this.FormBorderStyle = FormBorderStyle.None;
+            // Убираем кнопки свернуть, развернуть, закрыть.
+            this.ControlBox = false;
+            // Убираем заголовок.
+            this.Text = "";

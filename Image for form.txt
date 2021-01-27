@@ -1,0 +1,16 @@
+\\ Из папки "Resurese"
+public Form1()
+        {
+            InitializeComponent();
+                img = Resource.Kuri_1680x1050;
+        this.BackgroundImage = new Bitmap( img );
+    }
+}
+\\Через путь 
+public MainForm() {
+  InitializeComponent();
+  this.BackgroundImage = new Bitmap(@"C:\WINDOWS\Web\Wallpaper\Kuri_1680x1050");// путь к изображению
+}
+\\Ещё один способ
+ this.BackgroundImage = new Bitmap(@"d:\фото\img247.jpg");
+            this.BackgroundImageLayout = ImageLayout.Stretch;
